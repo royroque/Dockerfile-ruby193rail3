@@ -1,0 +1,3542 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (9.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (16.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20150218182710)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "context" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150218182710')[0m
+  [1m[35m (16.7ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 172.17.42.1 at 2015-02-18 18:27:39 +0000
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (4ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:27:44 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/post.css.scssc: can't dump anonymous class #<Class:0x000000030a1880>
+Compiled post.css  (5ms)  (pid 4085)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/posts.css.scssc: can't dump anonymous class #<Class:0x000000030a1880>
+Compiled posts.css  (2ms)  (pid 4085)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/scaffolds.css.scssc: can't dump anonymous class #<Class:0x000000030a1880>
+Compiled scaffolds.css  (19ms)  (pid 4085)
+Compiled application.css  (43ms)  (pid 4085)
+Compiled jquery.js  (2ms)  (pid 4085)
+Compiled jquery_ujs.js  (0ms)  (pid 4085)
+Compiled post.js  (0ms)  (pid 4085)
+Compiled posts.js  (0ms)  (pid 4085)
+Compiled application.js  (62ms)  (pid 4085)
+Completed 200 OK in 250.0ms (Views: 194.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /post.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /post.js - 200 OK (7ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /posts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:27:45 +0000
+Served asset /application.js - 304 Not Modified (14ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (19.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218182710)
+Migrating to CreateBooks (20150218182900)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "author" varchar(255), "price" integer, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150218182900')[0m
+  [1m[35m (21.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (17.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218182710)
+Migrating to CreateBooks (20150218182900)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (17.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "posts" ("context", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["context", "This is the first post"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "post1"], ["title", "First Post"], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("context", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["context", "This is the second post"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "post2"], ["title", "Second Post"], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[36m (14.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("context", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["context", "This is the third post"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "post3"], ["title", "Third Post"], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[35m (14.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("context", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["context", "This is the fourth post"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "post4"], ["title", "Fourth Post"], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "The Goldfinch"], ["price", 29], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[35m (14.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "Humans of New York"], ["price", 19], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "Thank You for Your Service"], ["price", 18], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["created_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00], ["name", "The Night Guest:  A Novel"], ["price", 16], ["updated_at", Wed, 18 Feb 2015 18:34:30 UTC +00:00]]
+  [1m[36m (16.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:34:46 +0000
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (19.0ms)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/books.css.scssc: can't dump anonymous class #<Class:0x000000028c6610>
+Compiled books.css  (5ms)  (pid 4209)
+Compiled application.css  (11ms)  (pid 4209)
+Compiled books.js  (0ms)  (pid 4209)
+Compiled application.js  (6ms)  (pid 4209)
+Completed 200 OK in 192.3ms (Views: 129.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /books.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /posts.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /books.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /post.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /posts.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:34:47 +0000
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:34:55 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+Completed 406 Not Acceptable in 73.5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:37:55 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (18.3ms)
+Completed 200 OK in 117.2ms (Views: 55.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (27.6ms)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/books.css.scssc: can't dump anonymous class #<Class:0x00000001c63cb0>
+Compiled books.css  (28ms)  (pid 4303)
+Compiled application.css  (8ms)  (pid 4303)
+Completed 200 OK in 141.7ms (Views: 113.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /application.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /books.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /post.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /books.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:38:08 +0000
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:39:26 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (1.7ms)
+Completed 200 OK in 4.4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:41:29 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (13.7ms)
+Completed 200 OK in 109.8ms (Views: 53.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (4.0ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 110.7ms (Views: 79.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /books.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /application.css - 304 Not Modified (59ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /books.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /posts.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:41:43 +0000
+Served asset /post.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 172.17.42.1 at 2015-02-18 18:41:56 +0000
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 34.0ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /post.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:42:07 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-18 18:42:11 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 17.6ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (18.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218182710)
+Migrating to CreateBooks (20150218182900)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (18.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (17.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218182710)
+Migrating to CreateBooks (20150218182900)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (17.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (18.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218182900)
+Migrating to CreatePosts (20150218184450)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "context" text) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150218184450')[0m
+  [1m[35m (24.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (17.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the first post"], ["name", "post1"], ["title", "First Post"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the second post"], ["name", "post2"], ["title", "Second Post"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the third post"], ["name", "post3"], ["title", "Third Post"]]
+  [1m[35m (15.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the fourth post"], ["name", "post4"], ["title", "Fourth Post"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["created_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00], ["name", "The Goldfinch"], ["price", 29], ["updated_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["created_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00], ["name", "Humans of New York"], ["price", 19], ["updated_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00]]
+  [1m[36m (16.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["created_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00], ["name", "Thank You for Your Service"], ["price", 18], ["updated_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00]]
+  [1m[35m (14.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "created_at", "name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["created_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00], ["name", "The Night Guest:  A Novel"], ["price", 16], ["updated_at", Wed, 18 Feb 2015 18:45:32 UTC +00:00]]
+  [1m[36m (33.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:45:42 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (14.9ms)
+Completed 200 OK in 113.8ms (Views: 52.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-18 18:45:46 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 27.4ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 98.6ms (Views: 87.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /books.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /posts.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /books.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /posts.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:45:56 +0000
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-18 18:46:00 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 6.2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22.7ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /books.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:09 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/books" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14.3ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 18:46:14 +0000
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/books/index.html" for 172.17.42.1 at 2015-02-18 18:46:29 +0000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered books/show.html.erb within layouts/application (36.9ms)
+Completed 500 Internal Server Error in 50.2ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Name:</b>
+    5:   <%= @book.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__2220566573460958691_69905290704160'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 18:46:49 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (17.1ms)
+Completed 200 OK in 26.3ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-18 18:51:16 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 4.3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (18.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218182900)
+Migrating to CreatePosts (20150218184450)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (18.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the first post"], ["name", "post1"], ["title", "First Post"]]
+  [1m[35m (12.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the second post"], ["name", "post2"], ["title", "Second Post"]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the third post"], ["name", "post3"], ["title", "Third Post"]]
+  [1m[35m (16.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the fourth post"], ["name", "post4"], ["title", "Fourth Post"]]
+  [1m[36m (15.3ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (19.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218182900)
+Migrating to CreatePosts (20150218184450)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (17.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the first post"], ["name", "post1"], ["title", "First Post"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the second post"], ["name", "post2"], ["title", "Second Post"]]
+  [1m[36m (15.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the third post"], ["name", "post3"], ["title", "Third Post"]]
+  [1m[35m (17.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the fourth post"], ["name", "post4"], ["title", "Fourth Post"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (18.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218184450)
+Migrating to CreateBooks (20150218190124)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "author" varchar(255), "price" integer, "active" boolean) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150218190124')[0m
+  [1m[35m (18.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the first post"], ["name", "post1"], ["title", "First Post"]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the second post"], ["name", "post2"], ["title", "Second Post"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)[0m  [["context", "This is the third post"], ["name", "post3"], ["title", "Third Post"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("context", "name", "title") VALUES (?, ?, ?)  [["context", "This is the fourth post"], ["name", "post4"], ["title", "Fourth Post"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["name", "The Goldfinch"], ["price", 29]]
+  [1m[35m (15.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["name", "Humans of New York"], ["price", 19]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["name", "Thank You for Your Service"], ["price", 18]]
+  [1m[35m (14.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["name", "The Night Guest:  A Novel"], ["price", 16]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 19:04:50 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (1.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (15.1ms)
+Completed 200 OK in 120.0ms (Views: 59.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-18 19:04:53 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 14.6ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 83.0ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /application.css - 304 Not Modified (61ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /books.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /post.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /post.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:04:59 +0000
+Served asset /books.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:05:00 +0000
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:05:00 +0000
+Served asset /application.js - 304 Not Modified (26ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 19:20:32 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (16.2ms)
+Completed 200 OK in 112.4ms (Views: 54.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 102.7ms (Views: 86.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /application.css - 304 Not Modified (100ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /post.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /books.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /posts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /books.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:20:37 +0000
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started DELETE "/posts/16" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"16"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (52.8ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 16]]
+  [1m[35m (16.6ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 89.7ms (ActiveRecord: 70.7ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 32.6ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /books.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /post.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /posts.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:45 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/posts/15" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"15"}
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 15]]
+  [1m[36m (30.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 41.5ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 49.3ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /books.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /books.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:47 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/posts/14" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (28.2ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 31.9ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 40.4ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /books.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:50 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/posts/13" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"13"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 17.4ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 50.3ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /post.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /books.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /post.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:52 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/posts/12" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (25.2ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 28.5ms (ActiveRecord: 25.6ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 18.3ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:54 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/posts/11" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"11"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (24.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 28.3ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 83.0ms (Views: 81.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /post.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:56 +0000
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started DELETE "/posts/10" for 172.17.42.1 at 2015-02-18 19:31:58 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (28.3ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 30.9ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 38.2ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /posts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:31:59 +0000
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:04 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/posts/9" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"9"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 17.1ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 21.8ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /books.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:06 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:07 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:07 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:07 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:07 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/posts/8" for 172.17.42.1 at 2015-02-18 19:32:08 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (28.7ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 32.3ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:08 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 87.5ms (Views: 86.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /books.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /post.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /books.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:09 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/posts/7" for 172.17.42.1 at 2015-02-18 19:32:10 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"7"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (23.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 27.8ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:10 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15.1ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:10 +0000
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /post.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:11 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started DELETE "/posts/6" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (19.7ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 23.5ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 18.5ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Served asset /post.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:13 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:14 +0000
+Served asset /posts.js - 304 Not Modified (5ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 63.4ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /post.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /books.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:17 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/posts/5" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vho+2b6O5N1wZ4pAd2Xwz01mcmpghsKgBVXJ6E66W2Q=", "id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 5]]
+  [1m[35m (39.6ms)[0m  commit transaction
+Redirected to http://172.17.0.12:3000/posts
+Completed 302 Found in 42.2ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14.5ms (Views: 12.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /books.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /books.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /post.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:20 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 11.3ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /post.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /posts.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /books.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /post.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:32:22 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/books/1.xml" for 172.17.42.1 at 2015-02-18 19:51:19 +0000
+
+AbstractController::ActionNotFound (The action 'show' could not be found for BooksController):
+  actionpack (3.2.21) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.21) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.21) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.21) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.21) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.21) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.21) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `_run__2572880263432711273__call__4401323595720979827__callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.21) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.21) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.21) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.21) lib/rails/engine.rb:484:in `call'
+  railties (3.2.21) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.21) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27.5ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /posts.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:24 +0000
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/posts/1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11.2ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /books.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-18 19:51:26 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/1.json" for 172.17.42.1 at 2015-02-18 19:51:33 +0000
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 2.5ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-18 19:51:50 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (1.8ms)
+Completed 200 OK in 8.3ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 15:42:51 +0000
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 176.7ms (Views: 117.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /books.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /post.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /posts.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /books.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /post.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /posts.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 15:42:52 +0000
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-19 15:42:55 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (24.7ms)
+Completed 200 OK in 54.4ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-19 15:43:01 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 2.8ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31.9ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:06 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 15:43:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 10.7ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /books.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /application.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:44 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:45 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:45 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:45 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 15:43:45 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-19 15:43:46 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 2.7ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-19 15:43:50 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (13.3ms)
+Completed 200 OK in 17.9ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 20.0ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /books.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 15:45:26 +0000
+Served asset /posts.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218184450)
+Migrating to CreateBooks (20150218190124)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218184450)
+Migrating to CreateBooks (20150218190124)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20150218184450)
+Migrating to CreateBooks (20150218190124)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150219194848)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean) 
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150219194848')[0m
+  [1m[35m (19.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "My ranking for this movie"], ["name", "movies"], ["rank", 2], ["title", "Rambo"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", false], ["context", "Boxing movie"], ["name", "movies"], ["rank", 1], ["title", "Rocky"]]
+  [1m[36m (13.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", false], ["context", "Really?"], ["name", "tv shows"], ["rank", 2], ["title", "Friends"]]
+  [1m[35m (14.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "Now you're talking"], ["name", "tv shows"], ["rank", 1], ["title", "Breaking Bad"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Just Ok"], ["name", "movies"], ["rank", 3], ["title", "Expandables"]]
+  [1m[35m (16.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "Zombie Time"], ["name", "tv shows"], ["rank", 3], ["title", "Walking Dead"]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["name", "The Goldfinch"], ["price", 29]]
+  [1m[35m (14.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["name", "Humans of New York"], ["price", 19]]
+  [1m[36m (15.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["name", "Thank You for Your Service"], ["price", 18]]
+  [1m[35m (16.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["name", "The Night Guest:  A Novel"], ["price", 16]]
+  [1m[36m (15.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 19:51:06 +0000
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 172.5ms (Views: 104.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /post.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /books.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /books.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /posts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /post.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:07 +0000
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/posts/1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23.2ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:33 +0000
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:34 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 19:51:34 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-19 19:52:27 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (23.9ms)
+Completed 200 OK in 119.6ms (Views: 66.7ms | ActiveRecord: 2.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "My ranking for this movie"], ["name", "movies"], ["rank", 2], ["title", "Rambo"]]
+  [1m[35m (13.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", false], ["context", "Boxing movie"], ["name", "movies"], ["rank", 1], ["title", "Rocky"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", false], ["context", "Really?"], ["name", "tv shows"], ["rank", 2], ["title", "Friends"]]
+  [1m[35m (15.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "Now you're talking"], ["name", "tv shows"], ["rank", 1], ["title", "Breaking Bad"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Just Ok"], ["name", "movies"], ["rank", 3], ["title", "Expandables"]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "Zombie Time"], ["name", "tv shows"], ["rank", 3], ["title", "Walking Dead"]]
+  [1m[36m (16.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (13.4ms)[0m  DELETE FROM "books"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Donna Tartt"], ["name", "The Goldfinch"], ["price", 29]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Brandon Stanton"], ["name", "Humans of New York"], ["price", 19]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "David Finkel"], ["name", "Thank You for Your Service"], ["price", 18]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Fiona McFarlane"], ["name", "The Night Guest:  A Novel"], ["price", 16]]
+  [1m[35m (15.2ms)[0m  commit transaction
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-19 19:53:16 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (2.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (14.4ms)
+Completed 200 OK in 143.4ms (Views: 54.0ms | ActiveRecord: 5.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150219195433)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean) 
+SQLite3::SQLException: table "posts" already exists: CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean) 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150219195657)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150219195657')[0m
+  [1m[35m (26.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (12.3ms)[0m  DELETE FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "My ranking for this movie"], ["name", "movies"], ["rank", 2], ["title", "Rambo"]]
+  [1m[36m (16.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", false], ["context", "Boxing movie"], ["name", "movies"], ["rank", 1], ["title", "Rocky"]]
+  [1m[35m (15.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", false], ["context", "Really?"], ["name", "tv shows"], ["rank", 2], ["title", "Friends"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Now you're talking"], ["name", "tv shows"], ["rank", 1], ["title", "Breaking Bad"]]
+  [1m[35m (16.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)  [["active", true], ["context", "Just Ok"], ["name", "movies"], ["rank", 3], ["title", "Expandables"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("active", "context", "name", "rank", "title") VALUES (?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Zombie Time"], ["name", "tv shows"], ["rank", 3], ["title", "Walking Dead"]]
+  [1m[35m (16.2ms)[0m  commit transaction
+  [1m[36mSQL (11.5ms)[0m  [1mDELETE FROM "books"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["name", "The Goldfinch"], ["price", 29]]
+  [1m[35m (14.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["name", "Humans of New York"], ["price", 19]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["name", "Thank You for Your Service"], ["price", 18]]
+  [1m[35m (12.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["name", "The Night Guest:  A Novel"], ["price", 16]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-19 19:57:43 +0000
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 133.6ms (Views: 78.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /books.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /post.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /posts.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /books.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /posts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-19 19:57:44 +0000
+Served asset /application.js - 304 Not Modified (22ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-19 19:58:09 +0000
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+Completed 200 OK in 3.4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-19 20:56:45 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (30.3ms)
+Completed 200 OK in 68.4ms (Views: 32.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 13:53:24 +0000
+Connecting to database specified by database.yml
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (26.0ms)
+Completed 200 OK in 108.2ms (Views: 68.4ms | ActiveRecord: 2.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20150219195657)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20150219195657'
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 15:02:58 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (15.2ms)
+Completed 200 OK in 145.9ms (Views: 56.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 15:03:01 +0000
+Processing by PostsController#index as JSON
+Completed 500 Internal Server Error in 1.5ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.5ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:03:13 +0000
+
+LoadError (cannot load such file -- nokogiri):
+  app/controllers/rumbas_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:03:50 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (57.1ms)
+Completed 200 OK in 73.4ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 15:03:53 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (7.4ms)
+Completed 200 OK in 95.6ms (Views: 18.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 15:03:55 +0000
+Processing by PostsController#index as JSON
+Completed 500 Internal Server Error in 1.8ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150220150611)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "context" text, "order" integer, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150220150611')[0m
+  [1m[35m (16.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150220150611)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (14.6ms)[0m  DELETE FROM "posts"
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150220150908)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+SQLite3::SQLException: table "posts" already exists: CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20150218190124)
+Migrating to CreatePosts (20150220151005)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "rank" integer, "context" text, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150220151005')[0m
+  [1m[35m (22.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (14.0ms)[0m  DELETE FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.1ms)[0m  INSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", true], ["context", "My ranking for this movie"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "movies"], ["rank", 2], ["title", "Rambo"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["active", false], ["context", "Boxing movie"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "movies"], ["rank", 1], ["title", "Rocky"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[35m (16.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", false], ["context", "Really?"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "tv shows"], ["rank", 2], ["title", "Friends"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[36m (23.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Now you're talking"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "tv shows"], ["rank", 1], ["title", "Breaking Bad"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[35m (13.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", true], ["context", "Just Ok"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "movies"], ["rank", 3], ["title", "Expandables"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("active", "context", "created_at", "name", "rank", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["active", true], ["context", "Zombie Time"], ["created_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00], ["name", "tv shows"], ["rank", 3], ["title", "Walking Dead"], ["updated_at", Fri, 20 Feb 2015 15:10:20 UTC +00:00]]
+  [1m[35m (16.5ms)[0m  commit transaction
+  [1m[36mSQL (15.6ms)[0m  [1mDELETE FROM "books"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "Donna Tartt"], ["name", "The Goldfinch"], ["price", 29]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Brandon Stanton"], ["name", "Humans of New York"], ["price", 19]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)[0m  [["active", true], ["author", "David Finkel"], ["name", "Thank You for Your Service"], ["price", 18]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "books" ("active", "author", "name", "price") VALUES (?, ?, ?, ?)  [["active", true], ["author", "Fiona McFarlane"], ["name", "The Night Guest:  A Novel"], ["price", 16]]
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 15:10:34 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 66.7ms (Views: 4.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-20 15:10:38 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (25.4ms)
+Warning. Error encountered while saving cache /data/blog/tmp/cache/sass/80673a09175e932697a04cacf656a8527cc2ab29/rumbas.css.scssc: can't dump anonymous class #<Class:0x00000001694348>
+Compiled rumbas.css  (25ms)  (pid 3486)
+Compiled application.css  (83ms)  (pid 3486)
+Compiled rumbas.js  (0ms)  (pid 3486)
+Compiled application.js  (10ms)  (pid 3486)
+Completed 200 OK in 268.2ms (Views: 266.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /books.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /post.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rumbas.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /rumbas.css - 200 OK (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /posts.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /post.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /books.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /posts.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/rumbas.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /rumbas.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-20 15:10:39 +0000
+Served asset /application.js - 304 Not Modified (66ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 15:10:44 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (36.3ms)
+Completed 200 OK in 50.8ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:11:00 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (32.1ms)
+Completed 200 OK in 36.7ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 15:13:34 +0000
+Processing by BooksController#index as XML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.xml.builder (13.5ms)
+Completed 200 OK in 109.7ms (Views: 53.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:13:37 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (27.2ms)
+Completed 200 OK in 39.5ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 61.0ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /books.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rumbas.css?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /rumbas.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /books.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /posts.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /post.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/rumbas.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /rumbas.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-20 15:13:41 +0000
+Served asset /application.js - 304 Not Modified (67ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 15:13:46 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 6.3ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:28:52 +0000
+Processing by RumbasController#_generate_wsdl as */*
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (30.3ms)
+Completed 200 OK in 40.5ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:28:52 +0000
+Processing by RumbasController#_invalid_action as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+{"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}, "controller"=>"rumbas", "action"=>"_action"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/error.builder (0.8ms)
+Completed 500 Internal Server Error in 6.9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:44:15 +0000
+Processing by RumbasController#_generate_wsdl as */*
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (15.3ms)
+Completed 200 OK in 24.2ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:44:15 +0000
+Processing by RumbasController#_invalid_action as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+{"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}, "controller"=>"rumbas", "action"=>"_action"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/error.builder (0.5ms)
+Completed 500 Internal Server Error in 4.9ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:44:25 +0000
+Processing by RumbasController#_generate_wsdl as */*
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (20.8ms)
+Completed 200 OK in 29.8ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:44:25 +0000
+Processing by RumbasController#_invalid_action as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+{"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}, "controller"=>"rumbas", "action"=>"_action"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/error.builder (0.8ms)
+Completed 500 Internal Server Error in 6.6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:44:39 +0000
+Processing by RumbasController#_generate_wsdl as */*
+{"controller"=>"rumbas", "action"=>"_generate_wsdl"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (86.5ms)
+Completed 200 OK in 99.0ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:44:39 +0000
+Processing by RumbasController#_invalid_action as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+{"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:wsdl"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ins0"=>"urn:WashOut", "Body"=>{"celsiusToFahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}, "controller"=>"rumbas", "action"=>"_action"}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/error.builder (0.2ms)
+Completed 500 Internal Server Error in 3.7ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 15:49:48 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 71.8ms (Views: 3.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 15:49:50 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (32.9ms)
+Completed 200 OK in 100.3ms (Views: 88.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:49:53 +0000
+
+LoadError (Expected /data/blog/app/controllers/rumbas_controller.rb to define RumbasController):
+  activesupport (3.2.21) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+  activesupport (3.2.21) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.21) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.21) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.21) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.21) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.21) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `_run__4172631221503983715__call__3053334131470991798__callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.21) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.21) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.21) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.21) lib/rails/engine.rb:484:in `call'
+  railties (3.2.21) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.21) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:50:06 +0000
+
+ActionController::RoutingError (uninitialized constant RumbasController):
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.21) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.21) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.21) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.21) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `_run__4172631221503983715__call__3053334131470991798__callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.21) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.21) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.21) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.21) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.21) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.21) lib/rails/engine.rb:484:in `call'
+  railties (3.2.21) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.21) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 15:52:12 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (42.5ms)
+Completed 200 OK in 60.2ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:54:04 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (8.0ms)
+Completed 200 OK in 12.8ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:54:04 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+Completed 500 Internal Server Error in 1.0ms
+
+NoMethodError (undefined method `*' for nil:NilClass):
+  app/controllers/rumbas_controller.rb:13:in `celsius_to_fahrenheit'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 15:54:27 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (14.4ms)
+Completed 200 OK in 20.6ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 15:54:27 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>{"xsi:nil"=>"true"}}}}}
+Completed 500 Internal Server Error in 0.6ms
+
+NoMethodError (undefined method `*' for nil:NilClass):
+  app/controllers/rumbas_controller.rb:13:in `celsius_to_fahrenheit'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/rumbas/wsdl/post" for 172.17.42.1 at 2015-02-20 16:03:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/rumbas/wsdl/post"):
+  actionpack (3.2.21) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.21) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.21) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.21) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.21) lib/rails/engine.rb:484:in `call'
+  railties (3.2.21) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.21) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/rumbas/wsdl/post/invoke" for 172.17.42.1 at 2015-02-20 16:03:34 +0000
+
+ActionController::RoutingError (No route matches [GET] "/rumbas/wsdl/post/invoke"):
+  actionpack (3.2.21) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.21) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.21) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.21) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.21) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.21) lib/action_dispatch/middleware/static.rb:83:in `call'
+  railties (3.2.21) lib/rails/engine.rb:484:in `call'
+  railties (3.2.21) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.21) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 16:03:38 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (9.1ms)
+Completed 200 OK in 11.9ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 16:16:48 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.9ms)
+Completed 200 OK in 8.1ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 16:19:56 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 94.5ms (Views: 6.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 16:19:59 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (53.9ms)
+Completed 200 OK in 73.0ms (Views: 58.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 16:20:01 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.1ms)
+Completed 200 OK in 5.9ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:26:55 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.2ms)
+Completed 200 OK in 6.9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:31:06 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.5ms)
+Completed 200 OK in 5.9ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:37:53 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.4ms)
+Completed 200 OK in 7.0ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:37:53 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.8ms)
+Completed 200 OK in 7.0ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:39:32 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.7ms)
+Completed 200 OK in 6.3ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:39:32 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.6ms)
+Completed 200 OK in 5.6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:39:47 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.4ms)
+Completed 200 OK in 6.5ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:39:47 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 4.6ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:39:47 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.6ms)
+Completed 200 OK in 12.1ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:39:47 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 5.2ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:39:54 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.0ms)
+Completed 200 OK in 6.5ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:39:54 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 4.8ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:39:54 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (38.3ms)
+Completed 200 OK in 42.4ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:39:54 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 4.1ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:41:31 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.7ms)
+Completed 200 OK in 6.3ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:41:31 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.9ms)
+Completed 200 OK in 5.6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:41:31 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.9ms)
+Completed 200 OK in 10.3ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:41:31 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 5.9ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:41:41 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.3ms)
+Completed 200 OK in 5.9ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:41:41 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 4.2ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:41:41 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.9ms)
+Completed 200 OK in 13.3ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:41:41 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 4.0ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:22 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.2ms)
+Completed 200 OK in 6.9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:22 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 4.8ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:22 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (5.3ms)
+Completed 200 OK in 10.9ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:22 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 5.7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:32 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.7ms)
+Completed 200 OK in 6.0ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:32 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 6.4ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:32 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.9ms)
+Completed 200 OK in 11.5ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:32 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 5.8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:57 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.7ms)
+Completed 200 OK in 6.1ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:57 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 8.1ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:43:57 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (7.8ms)
+Completed 200 OK in 12.1ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:43:57 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.7ms)
+Completed 200 OK in 6.1ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:44:02 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.4ms)
+Completed 200 OK in 6.4ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:44:02 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 4.5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:44:02 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.8ms)
+Completed 200 OK in 5.8ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:44:02 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (1.0ms)
+Completed 200 OK in 7.1ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:51:01 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.8ms)
+Completed 200 OK in 7.1ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:51:01 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.7ms)
+Completed 200 OK in 6.4ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:51:01 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.8ms)
+Completed 200 OK in 14.6ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:51:01 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.3ms)
+Completed 200 OK in 7.2ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:52:24 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.2ms)
+Completed 200 OK in 6.8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:52:24 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 8.7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:52:25 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.4ms)
+Completed 200 OK in 10.7ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:52:25 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (2.1ms)
+Completed 200 OK in 10.8ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:53:35 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.8ms)
+Completed 200 OK in 6.0ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:53:35 +0000
+Processing by RumbasController#fahrenheit_to_celsius as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"fahrenheit_to_celsius"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.5ms)
+Completed 200 OK in 4.8ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 127.0.0.1 at 2015-02-20 16:53:35 +0000
+Processing by RumbasController#_generate_wsdl as */*
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (6.1ms)
+Completed 200 OK in 10.4ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rumbas/action" for 127.0.0.1 at 2015-02-20 16:53:35 +0000
+Processing by RumbasController#celsius_to_fahrenheit as */*
+  Parameters: {"Envelope"=>{"xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "xmlns:tns"=>"urn:WashOut", "xmlns:env"=>"http://schemas.xmlsoap.org/soap/envelope/", "Body"=>{"celsius_to_fahrenheit"=>{"value"=>"2"}}}}
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/response.builder (0.4ms)
+Completed 200 OK in 6.7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.0.11 at 2015-02-20 16:58:17 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.5ms)
+Completed 200 OK in 6.1ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.0.11 at 2015-02-20 17:31:00 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.2ms)
+Completed 200 OK in 7.1ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.0.11 at 2015-02-20 17:33:12 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (3.0ms)
+Completed 200 OK in 4.3ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts.json" for 172.17.42.1 at 2015-02-20 17:38:30 +0000
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+Completed 200 OK in 3.7ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 17:38:32 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (2.6ms)
+Completed 200 OK in 4.1ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 17:38:33 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (1.7ms)
+Completed 200 OK in 5.1ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 17:38:52 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (8.7ms)
+Completed 200 OK in 11.6ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.0.11 at 2015-02-20 17:41:56 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.1ms)
+Completed 200 OK in 7.3ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 75.9ms (Views: 74.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/post.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /post.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /posts.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/rumbas.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /rumbas.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/books.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /books.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /jquery.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/post.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /post.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /posts.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/books.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /books.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/rumbas.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /rumbas.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.17.42.1 at 2015-02-20 17:47:50 +0000
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/rumbas/wsdl" for 172.17.42.1 at 2015-02-20 17:48:31 +0000
+Processing by RumbasController#_generate_wsdl as HTML
+  Rendered /var/lib/gems/1.9.1/gems/wash_out-0.9.2/app/views/wash_with_soap/rpc/wsdl.builder (4.6ms)
+Completed 200 OK in 6.1ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books.xml" for 172.17.42.1 at 2015-02-20 17:48:33 +0000
+Processing by BooksController#index as XML
+  [1m[35mBook Load (1.1ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.xml.builder (3.3ms)
+Completed 200 OK in 14.9ms (Views: 10.7ms | ActiveRecord: 1.1ms)

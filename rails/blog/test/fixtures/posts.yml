@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  title: MyString
+  rank: 1
+  context: MyText
+  active: false
+
+two:
+  name: MyString
+  title: MyString
+  rank: 1
+  context: MyText
+  active: false
