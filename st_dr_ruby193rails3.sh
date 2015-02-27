@@ -13,6 +13,6 @@ docker rm -f $stack_name >/dev/null 2>&1
 docker run -dit --volumes-from=$vol_mach_name \
            -p 3000:3000 \
            --name $stack_name -h $stack_name \
-           $image_name 
+           $image_name bash -c "cd /data/blog && rails server" 
 
 echo "`docker inspect $stack_name |grep -i IPADDR`      $stack_name"

@@ -11,13 +11,11 @@ RUN sudo apt-get install -y libxml2-dev
 RUN sudo apt-get install -y zlib1g-dev
 RUN sudo gem install nokogiri -v '1.5.0' -- --with-cflags=\"-Wformat-nonliteral -Wno-format-security\"
 
-RUN mkdir -p /data/blog
-ADD /rails/blog /data/blog
-RUN cd /data/blog && bundle install
 EXPOSE 3000
 
-# Supervisor
+RUN mkdir -p /data/blog
 WORKDIR /data/blog
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["/usr/bin/supervisord"]
-
+##TODO: use git clone of the rails apps instead of COPY 
+COPY /rails/blog /data/blog
+RUN cd /data/blog && bundle install
+CMD ["cd /data/blog && rails server"]
