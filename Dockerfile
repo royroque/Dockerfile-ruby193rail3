@@ -15,7 +15,7 @@ EXPOSE 3000
 
 RUN mkdir -p /data/blog
 WORKDIR /data/blog
-##TODO: use git clone of the rails apps instead of COPY 
+## TODO: use git clone of the rails apps instead of COPY 
 COPY /rails/blog /data/blog
 RUN cd /data/blog && bundle install
 CMD ["cd /data/blog && rails server"]
