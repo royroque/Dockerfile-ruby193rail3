@@ -1,7 +1,15 @@
 ### Content
+*This is a dockerfile with:
+ +base:  dockerfile/ubuntu
+ +ruby193
+ +rails 3.2.21
 
 ##### In addition, a sample rails app was included
  +sample app: 'blog' with rest, xml, and wdsl
+
+ +Note: Dockerfile also runs:
+ +RUN cd /data/blog && bundle install
+ +CMD ["cd /data/blog && rails server"]
 
 
 ##### Note: 
